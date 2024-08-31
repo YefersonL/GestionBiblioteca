@@ -1,15 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package gestionbiblioteca;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author renelobo
- */
+
 public class Biblioteca {
     
     private ArrayList<Libro> libros;
@@ -29,7 +23,14 @@ public class Biblioteca {
     }
 
     public void prestarLibro(String titulo) {
-        // Implementar
+        for(int i=0; i<libros.size(); i++){
+        if(libros.get(i).getTitulo().equals(titulo) && libros.get(i).isPrestado()==false){
+            
+            System.out.println("Esta disponible el libro");
+        }
+            System.out.println("El libro se encuentra en prestamo");
+        }
+              
     }
 
     public void devolverLibro(String titulo) {
