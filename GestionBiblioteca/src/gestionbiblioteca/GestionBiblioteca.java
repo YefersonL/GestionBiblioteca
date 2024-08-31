@@ -27,7 +27,10 @@ public class GestionBiblioteca {
                 System.out.println();
                 break;
             case 2: 
-                System.out.println("");
+                System.out.println("Ingrese el autor a buscar");
+                String autor = scanner.nextLine();
+                biblioteca.buscarPorAutor(autor);
+                
                 break;
             case 3: 
                 System.out.println("");
@@ -45,8 +48,6 @@ public class GestionBiblioteca {
     
     
     
-    public static void buscarlibro (){
-        buscarlibro();
-    }
+    
     
 }
