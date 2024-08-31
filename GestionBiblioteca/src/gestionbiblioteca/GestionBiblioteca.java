@@ -19,7 +19,33 @@ public class GestionBiblioteca {
         Biblioteca biblioteca = new Biblioteca();
         Scanner scanner = new Scanner(System.in);
         
-        // Implementar un menú para interactuar con la biblioteca
+        int opc = scanner.nextInt();
+        System.out.println("Bienvenido a Konrad Library");
+        System.out.println("1) Prestamo de libros");
+        System.out.println("2) Buscar libros por autor");
+        System.out.println("3) Buscar libros por titulo");
+        System.out.println("4) Devolver libro");
+        System.out.println("5) Salir");
+        switch(opc){
+        
+            case 1:
+                System.out.println();
+                break;
+            case 2: 
+                System.out.println("");
+                break;
+            case 3: 
+                System.out.println("");
+                break;
+            case 4: 
+                System.out.println("");
+                break;
+            case 5:
+                System.out.println("");
+                break;
+                
+        
+        }
     }
     
 }
