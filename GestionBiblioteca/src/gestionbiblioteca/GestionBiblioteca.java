@@ -22,7 +22,7 @@ public class GestionBiblioteca {
         System.out.println("4) Devolver libro");
         System.out.println("5) Salir");
         System.out.println("Ingrese una opcion");
-        int opc = scanner.nextInt();
+        int opc = Integer.parseInt(scanner.nextLine());
         switch(opc){
         
             case 1:
