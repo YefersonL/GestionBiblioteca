@@ -38,7 +38,13 @@ public class Biblioteca {
     }
 
     public void buscarPorAutor(String autor) {
-        // Implementar
+        for (int i = 0; i < 10; i++) {
+            if(libros.get(i).getAutor().equals(autor)){
+                System.out.println("Libro encontrado");
+                System.out.println(libros.get(i));
+            }
+            
+        }
     }
 
 }
