@@ -35,13 +35,13 @@ public class GestionBiblioteca {
 
                     break;
                 case 3:
-                    System.out.println("");
+                    System.out.println("Ingrese un titulo");
                     break;
                 case 4:
-                    System.out.println("");
+                    System.out.println("Devolver Libro");
                     break;
                 case 5:
-                    System.out.println("");
+                    System.out.println("Hasta luego");
                     break;
 
             }
