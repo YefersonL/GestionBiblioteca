@@ -22,12 +22,14 @@ public class GestionBiblioteca {
             System.out.println("1) Prestamo de libros");
             System.out.println("2) Buscar libros por autor");
             System.out.println("3) Devolver libro");
-            System.out.println("4) Salir");
+            System.out.println("4) Mostrar Libros ");
+            System.out.println("5) Salir");
             System.out.println("Ingrese una opcion:");
 
             int opc = Integer.parseInt(scanner.nextLine());
             switch (opc) {
                 case 1:
+                    biblioteca.mostrarLibros();
                     System.out.println("Ingrese el nombre del libro:");
                     String titulo = scanner.nextLine();
                     biblioteca.prestarLibro(titulo);
@@ -43,6 +45,9 @@ public class GestionBiblioteca {
                     biblioteca.devolverLibro(tituloDevolver);
                     break;
                 case 4:
+                    biblioteca.mostrarLibros();
+                    break;
+                case 5:
                     System.out.println("Hasta luego");
                     scanner.close();
                     return;
@@ -51,4 +56,6 @@ public class GestionBiblioteca {
             }
         }
     }
+    
+   
 }
