@@ -1,11 +1,9 @@
-
 package gestionbiblioteca;
 
 import java.util.ArrayList;
 
-
 public class Biblioteca {
-    
+
     private ArrayList<Libro> libros;
 
     public Biblioteca() {
@@ -23,28 +21,40 @@ public class Biblioteca {
     }
 
     public void prestarLibro(String titulo) {
-        for(int i=0; i<libros.size(); i++){
-        if(libros.get(i).getTitulo().equals(titulo) && libros.get(i).isPrestado()==false){
-            
-            System.out.println("Esta disponible el libro");
+        for (Libro libro : libros) { // Mejor usar for-each para recorrer la lista
+            if (libro.getTitulo().equals(titulo)) {
+                if (!libro.isPrestado()) {
+                    libro.setPrestado(true);
+                    System.out.println("Libro prestado: " + titulo);
+                } else {
+                    System.out.println("El libro ya está prestado.");
+                }
+                return; // Detenemos el ciclo cuando encontramos el libro
+            }
         }
-            System.out.println("El libro se encuentra en prestamo");
-        }
-              
+        System.out.println("Libro no encontrado."); // Si no encuentra el libro
     }
 
     public void devolverLibro(String titulo) {
-        // Implementar
-    }
-
-    public void buscarPorAutor(String autor) {
-        for (int i = 0; i < 10; i++) {
-            if(libros.get(i).getAutor().equals(autor)){
-                System.out.println("Libro encontrado");
-                System.out.println(libros.get(i));
+        for (Libro libro : libros) {
+            if (libro.getTitulo().equals(titulo)) {
+                if (libro.isPrestado()) {
+                    libro.setPrestado(false);
+                    System.out.println("Libro devuelto: " + titulo);
+                } else {
+                    System.out.println("El libro no estaba prestado.");
+                }
+                return;
             }
-            
+        }
+        System.out.println("Libro no encontrado.");
+    }
+    
+    public void buscarPorAutor(String autor) {
+        for (Libro libro : libros) {
+            if (libro.getAutor().equals(autor)) {
+                System.out.println("Libro encontrado: " + libro.getTitulo());
+            }
         }
     }
-
 }
