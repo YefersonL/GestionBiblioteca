@@ -47,7 +47,7 @@ public class InventarioTienda {
                         String nombre = sc.nextLine();
                         newlapto.setNombre(nombre);
                         System.out.println("Ingrese el precio: ");
-                        double precio = Integer.parseInt(sc.nextLine());
+                        double precio =  Double.parseDouble(sc.nextLine());
                         newlapto.setPrecio(precio);
                         System.out.println("Ingrese el Stock donde se ubicara: ");
                         int stock = Integer.parseInt(sc.nextLine());
@@ -67,7 +67,7 @@ public class InventarioTienda {
                         String nombre = sc.nextLine();
                         newSmart.setNombre(nombre);
                         System.out.println("Ingrese el precio: ");
-                        double precio = Integer.parseInt(sc.nextLine());
+                        double precio =  Double.parseDouble(sc.nextLine());
                         newSmart.setPrecio(precio);
                         System.out.println("Ingrese el Stock donde se ubicara: ");
                         int stock = Integer.parseInt(sc.nextLine());
@@ -81,7 +81,7 @@ public class InventarioTienda {
                         String marca = sc.nextLine();
                         newTablet.setMarca(marca);
                         System.out.println("Ingrese el sistema operativo: ");
-                        double tamanoPantalla = sc.nextDouble();
+                        double tamanoPantalla = Double.parseDouble(sc.nextLine());
                         newTablet.setTamanoPantalla(tamanoPantalla);
                         System.out.println("Ingrese el nombre: ");
                         String nombre = sc.nextLine();
@@ -160,15 +160,15 @@ public class InventarioTienda {
             return null; // Devuelve null si el inventario está vacío
         }
 
-        DispositivoElectronico dispositivoMasCaro = inventario.get(0); // Asignar el primer dispositivo como el más caro inicialmente
+        DispositivoElectronico dispositivoMasCaro = inventario.get(0); 
 
         for (DispositivoElectronico dispositivoElectronico : inventario) {
             if (inventario.get(0).precio > inventario.get(0).precio) {
-                dispositivoMasCaro = dispositivoElectronico; // Actualizar si se encuentra uno más caro
+                dispositivoMasCaro = dispositivoElectronico; 
             }
         }
 
-        return dispositivoMasCaro; // Devolver el dispositivo más caro encontrado
+        return dispositivoMasCaro; 
     }
 
     public static double calcularValorTotalInventario() {
